@@ -1,0 +1,201 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR TIPO CELULAR */
+.container {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+}
+
+/* IMAGEN */
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* INFO */
+.info {
+  padding: 12px;
+}
+
+.credito {
+  color: #555;
+  font-size: 12px;
+}
+
+.envio {
+  background: #0a9f3f;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.rating {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.precio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.antes {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 13px;
+}
+
+.ahora {
+  color: #ff6a00;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.descuento {
+  background: #ffe5d0;
+  color: #ff6a00;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.promo {
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.plazos {
+  background: #fff4e5;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* BARRA INFERIOR */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.precio-final .antes {
+  display: block;
+  font-size: 11px;
+}
+
+.precio-final .ahora {
+  font-size: 20px;
+  color: #ff6a00;
+  font-weight: bold;
+}
+
+/* BOTÓN MÁS PRO */
+.btn {
+  background: linear-gradient(45deg, #ff6a00, #ff8c00);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ESPACIO PARA QUE NO TAPE EL CONTENIDO */
+body::after {
+  content: "";
+  display: block;
+  height: 70px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="image">
+    <img src="img/camisa.png" alt="producto">
+  </div>
+
+  <div class="info">
+
+    <p class="credito">✔ $1.00 de crédito por retraso</p>
+
+    <div class="envio">
+      ✔ Envío gratis 🚚 En SV en al menos 4 días hábiles
+    </div>
+
+    <h2 class="titulo">
+      Camisa Sin Mangas a Rayas Moderna, Ideal para Oficina, Hogar y Citas
+    </h2>
+
+    <div class="rating">
+      ⭐ Vendedor estrella &nbsp;&nbsp; 5.0 ★ | 171 ventas
+    </div>
+
+    <div class="precio">
+      <span class="antes">$15.92</span>
+      <span class="ahora">$8.38</span>
+      <span class="descuento">47% OFF</span>
+    </div>
+
+    <p class="promo">Después de promociones: $10.47</p>
+
+    <div class="plazos">
+      Pago a plazos con tarjeta: $0.73 por plazo
+    </div>
+
+  </div>
+
+</div>
+
+<div class="bottom-bar">
+  <div class="precio-final">
+    <span class="antes">$15.92</span>
+    <span class="ahora">$8.38</span>
+  </div>
+  <button class="btn">¡AGREGA LAS ÚLTIMAS 5!</button>
+</div>
+
+</body>
+</html>
+```
