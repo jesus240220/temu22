@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -62,44 +62,69 @@ body {
   margin-bottom: 8px;
 }
 
-.precio {
+/* NUEVO PRECIO */
+.precio-box {
+  margin-top: 5px;
+}
+
+.fila1 {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.antes {
+.precio-grande {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+}
+
+.precio-tachado {
   text-decoration: line-through;
   color: #999;
+}
+
+.precio-est {
+  color: #666;
   font-size: 13px;
 }
 
-.ahora {
-  color: #ff6a00;
-  font-size: 22px;
-  font-weight: bold;
+.fila2 {
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.etiquetas {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 .descuento {
-  background: #ffe5d0;
+  border: 1px solid #ff6a00;
   color: #ff6a00;
   padding: 3px 6px;
   border-radius: 5px;
-  font-size: 11px;
-}
-
-.promo {
-  color: #666;
   font-size: 12px;
-  margin-top: 4px;
 }
 
-.plazos {
-  background: #fff4e5;
-  padding: 8px;
+.stock {
+  background: #ff6a00;
+  color: white;
+  padding: 3px 8px;
   border-radius: 5px;
   font-size: 12px;
-  margin-top: 8px;
+}
+
+/* MENSAJE */
+.mensaje {
+  background: #f5e3d3;
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: #8a5a2b;
+  margin-top: 10px;
 }
 
 /* BARRA INFERIOR */
@@ -108,42 +133,36 @@ body {
   bottom: 0;
   width: 100%;
   max-width: 420px;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px;
+  background: white;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-.precio-final .antes {
-  display: block;
-  font-size: 11px;
-}
-
-.precio-final .ahora {
-  font-size: 20px;
-  color: #ff6a00;
-  font-weight: bold;
-}
-
-/* BOTÓN MÁS PRO */
-.btn {
+/* BOTÓN GRANDE */
+.btn-big {
+  width: 100%;
   background: linear-gradient(45deg, #ff6a00, #ff8c00);
   color: white;
   border: none;
-  padding: 12px 18px;
+  padding: 14px;
   border-radius: 30px;
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
-  font-size: 13px;
 }
 
-/* ESPACIO PARA QUE NO TAPE EL CONTENIDO */
+.btn-big span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+/* ESPACIO ABAJO */
 body::after {
   content: "";
   display: block;
-  height: 70px;
+  height: 90px;
 }
 </style>
 
@@ -172,13 +191,29 @@ body::after {
       ⭐ Vendedor estrella &nbsp;&nbsp; 5.0 ★ | 171 ventas
     </div>
 
-    <div class="precio">
-      <span class="antes">$15.92</span>
-      <span class="ahora">$8.38</span>
-      <span class="descuento">47% OFF</span>
+    <!-- NUEVO BLOQUE DE PRECIO -->
+    <div class="precio-box">
+
+      <div class="fila1">
+        <span class="precio-grande">$13.00</span>
+        <span class="precio-tachado">$20.00</span>
+        <span class="precio-est">Est. $9.34</span>
+      </div>
+
+      <div class="fila2">
+        después de las promociones
+      </div>
+
+      <div class="etiquetas">
+        <span class="descuento">41% DE DESCUENTO</span>
+        <span class="stock">⏳ SOLO QUEDAN 5</span>
+      </div>
+
     </div>
 
-    <p class="promo">Después de promociones: $10.47</p>
+    <div class="mensaje">
+      🛒 Agrega este artículo para disfrutar de <b>$1.13 DE DTO.</b>
+    </div>
 
     <div class="plazos">
       Pago a plazos con tarjeta: $0.73 por plazo
@@ -189,13 +224,11 @@ body::after {
 </div>
 
 <div class="bottom-bar">
-  <div class="precio-final">
-    <span class="antes">$15.92</span>
-    <span class="ahora">$8.38</span>
-  </div>
-  <button class="btn">¡AGREGA LAS ÚLTIMAS 5!</button>
+  <button class="btn-big">
+    ⏳ ¡AGREGA LAS ÚLTIMAS 5!
+    <span>Llega a SV en tan solo 3 días hábiles</span>
+  </button>
 </div>
 
 </body>
 </html>
-```
